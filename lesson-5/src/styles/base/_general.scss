@@ -1,0 +1,94 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+// .container {
+//     @include container();
+//     @include sm(max-width, rem(510));
+//     @include md(max-width, rem(690));
+//     @include lg(max-width, rem(930));
+//     @include xl(max-width, rem(1110));
+// }
+
+body {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: 0;
+
+  @include mobile {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 96%;
+  }
+  @include mobile {
+    width: 92%;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+legend {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+}
+
+#input__form {
+  width: 360px;
+  padding: 13px 0 16px 17px;
+  margin: 21px 0 0 0;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #b1b1b1;
+}
+
+label {
+  margin: 31px 10px 31px 10px;
+  vertical-align: top;
+}
+
+hr {
+  width: 275px;
+  background-color: #e2e2e2;
+  opacity: 0.2;
+}

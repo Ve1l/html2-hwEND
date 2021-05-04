@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contacts</title>
+  </head>
+  <body>
+    @@include("../../blocks/modules/header/header.html")
+    <main class="registration">
+      <h1 class="registration__heading">registration</h1>
+      <div class="registration__wrapper container">
+        <div class="registration__form">
+          <fieldset>
+            <legend>Your Name</legend>
+            <p>
+              <input type="text" id="input__form" placeholder="First Name" />
+            </p>
+            <p>
+              <input type="text" id="input__form" placeholder="Last Name" />
+            </p>
+            <p class="registration__form-radio">
+              <input type="radio" name="gender" id="gender" /><label
+                class="input__form-male"
+                for="gender"
+                >Male</label
+              ><input
+                type="radio"
+                class="input__form-female"
+                name="gender"
+                id="gender"
+              /><label for="gender">Female</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Login details</legend>
+            <p><input type="email" id="input__form" placeholder="Email" /></p>
+            <p>
+              <input type="password" id="input__form" placeholder="Password" />
+            </p>
+            <p class="registration__form-text">
+              Please use 8 or more characters, with at least 1 number and a
+              mixture of uppercase and lowercase letters
+            </p>
+          </fieldset>
+          <button type="submit" class="registration__form-button">
+            join now<img
+              src="../../img/svg/arrow.svg"
+              class="registration__form-img"
+              alt="arrow"
+            />
+          </button>
+        </div>
+        <div class="loyalty">
+          <h2 class="loyalty__heading">loyalty has its perks</h2>
+          <p class="loyalty__text">
+            Get in on the loyalty program where you can earn points and unlock
+            serious perks. Starting with these as soon as you join:
+          </p>
+          <ul class="loyalty__list">
+            <li class="loyalty__item">15% off welcome offer</li>
+            <li class="loyalty__item">
+              Free shipping, returns and exchanges on all orders
+            </li>
+            <li class="loyalty__item">$10 off a purchase on your birthday</li>
+            <li class="loyalty__item">Early access to products</li>
+            <li class="loyalty__item">Exclusive offers & rewards</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    @@include("../../blocks/modules/footer/footer.html")
+  </body>
+</html>
