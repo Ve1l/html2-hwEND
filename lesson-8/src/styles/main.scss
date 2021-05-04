@@ -1,0 +1,568 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
+@import 'vendor/libs';
+@import 'base/fonts';
+@import 'base/general';
+@import '../blocks/modules';
+
+.promo {
+  display: flex;
+  margin: 0 0 63px;
+
+  &__img {
+    width: 50%;
+    height: auto;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__heading-wrapper {
+    background-color: $pink;
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    padding: 0 0 0 92px;
+    justify-content: center;
+
+    @include tablet {
+      padding: 0 0 0 68px;
+    }
+
+    @include mobile {
+      padding: 0 0 0 83px;
+      min-height: 363px;
+    }
+  }
+
+  &__heading {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 58px;
+    text-transform: uppercase;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 90px;
+      background-color: $dark-pink;
+      right: 104%;
+      top: 4%;
+
+      @include tablet {
+        height: 80px;
+      }
+    }
+  }
+
+  &__sub-heading {
+    @include font(32px, 38px, 700, normal);
+    display: block;
+
+    @include tablet {
+      @include font(24px, 29px, 700);
+    }
+    @include mobile {
+      @include font(20px, 24px, 700);
+    }
+  }
+
+  &__sub-heading-pink {
+    color: $dark-pink;
+  }
+}
+
+.categories {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 360px;
+    min-height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 30px;
+
+    @include tablet {
+      width: 32%;
+      min-height: 168px;
+      margin: 0 0 20px;
+    }
+    @include mobile {
+      width: 100%;
+      min-height: 247px;
+      margin: 0 0 32px;
+    }
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0 0 6px 0;
+  }
+
+  &__heading {
+    font-size: 24px;
+    line-height: 19px;
+    color: $dark-pink;
+    text-transform: uppercase;
+  }
+
+  &__item-bg {
+    background-color: rgba(33, 22, 22, 0.7);
+  }
+
+  &__item-woman {
+    background: #fff url('../img/categories-woman.jpg') no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0 130px rgba(33, 22, 22, 0.7) inset;
+  }
+
+  &__item-man {
+    background: #fff url('../img/categories-man.jpg') no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0 130px rgba(33, 22, 22, 0.7) inset;
+  }
+
+  &__item-kids {
+    background: #fff url('../img/categories-kids.jpg') no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0 130px rgba(33, 22, 22, 0.7) inset;
+  }
+
+  &__item-accessories {
+    background: #fff url('../img/categories-accesories.jpg') no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+    margin: 30px 0 97px 0;
+    box-shadow: 0 0 0 130px rgba(33, 22, 22, 0.7) inset;
+    width: 100%;
+    min-height: 180px;
+
+    @include tablet {
+      min-height: 116px;
+    }
+    @include mobile {
+      min-height: 111px;
+    }
+  }
+
+  &__item-woman:hover,
+  &__item-man:hover,
+  &__item-kids:hover,
+  &__item-accessories:hover {
+    box-shadow: none;
+  }
+}
+
+.products {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__heading {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $grey;
+    margin: 6px 0 48px 0;
+  }
+
+  &__item {
+    width: 360px;
+    margin: 0 0 48px 0;
+  }
+
+  &__item-woman {
+    text-align: center;
+    background-color: #f7e4e2;
+    flex-grow: 1;
+  }
+
+  &__item-heading {
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 25px 0 12px 16px;
+  }
+
+  &__item-text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5d5d5d;
+    margin: 0 29px 18px 16px;
+  }
+
+  &__item-price {
+    color: $dark-pink;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 20px 18px;
+  }
+
+  &__item-button {
+    display: none;
+  }
+
+  &__button {
+    display: flex;
+    margin: 0 auto 95px;
+    padding: 14px 38px 13px;
+    color: $dark-pink;
+    border: 1px solid;
+    background-color: transparent;
+    &:hover {
+      background-color: $dark-pink;
+      color: #fff;
+    }
+  }
+}
+
+.quality {
+  background-color: $dark-blue;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 341px;
+    align-items: center;
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 100%;
+      padding: 0 0 48px 0;
+    }
+  }
+
+  &__item-img {
+    margin: 0 0 28px 0;
+
+    @include mobile {
+      margin: 48px 0 0 0;
+    }
+  }
+
+  &__item-heading {
+    margin: 0 0 16px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #fbfbfb;
+  }
+
+  &__item-text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fbfbfb;
+    opacity: 0.7;
+    margin: 0 30px;
+
+    @include mobile {
+      max-width: 360px;
+      margin: 48px 0 0 0;
+    }
+  }
+}
+
+.registration {
+  &__heading {
+    height: 148px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: $dark-pink;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    background-color: #f8f3f4;
+    padding: 0 0 0 230px;
+    margin: 0 0 64px 0;
+
+    @include tablet {
+      padding: 0 0 0 16px;
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__form-radio {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  &__form-text {
+    margin: 15px 0 39px 0;
+    width: 360px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #b1b1b1;
+  }
+
+  &__form-button {
+    padding: 16px 0 17px 29px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    background-color: $dark-pink;
+    border: none;
+    margin: 0 0 96px 0;
+  }
+
+  &__form-img {
+    margin: 0 29px 0 20px;
+  }
+}
+
+.loyalty {
+  width: 54%;
+
+  @include mobile {
+    width: 100%;
+    margin: 0 0 100px 0;
+  }
+  &__heading {
+    text-transform: uppercase;
+  }
+
+  &__heading,
+  &__text,
+  &__item {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__text {
+    margin: 22px 0 21px 0;
+  }
+
+  &__item {
+    margin: 0 0 16px 43px;
+    position: relative;
+    &:before {
+      content: '';
+      width: 20px;
+      height: 16px;
+      background-image: url('../img/svg/ok.svg');
+      position: absolute;
+      top: 7px;
+      left: -43px;
+    }
+  }
+}
+
+.cart-heading {
+  background: #f8f3f4;
+  margin: 0 0 96px 0;
+
+  @include mobile {
+    margin: 0 0 39px 0;
+    text-align: center;
+  }
+  &__title {
+    padding: 60px 0;
+    text-transform: uppercase;
+    color: $dark-pink;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.cart {
+  display: flex;
+
+  @media (max-width: 1240px) {
+    display: block;
+  }
+
+  @include mobile {
+    display: block;
+  }
+  &__list {
+    margin: 22px 0 0 31px;
+  }
+  &__list-block {
+    display: flex;
+    width: 652px;
+    box-shadow: 24px 23px 27px #e1e1e1;
+    margin: 0 0 72px 0;
+
+    @media (max-width: 1240px) {
+      margin: 0 auto 72px;
+    }
+
+    @include mobile {
+      width: 100%;
+      img {
+        width: 144px;
+        height: 188px;
+      }
+    }
+  }
+  &__item-heading {
+    text-transform: uppercase;
+    width: 210px;
+    @include font(24px, 29px);
+    margin: 0 0 42px 0;
+
+    @include mobile {
+      width: 75%;
+      @include font(16px, 19px);
+      margin: 0 0 26px 0;
+    }
+  }
+  &__item {
+    margin: 0 0 6px 0;
+    @include font(22px, 26px, normal);
+    color: #575757;
+
+    @include mobile {
+      @include font(14px, 17px);
+      margin: 0 0 4px 0;
+    }
+  }
+  &__item_pink {
+    color: $dark-pink;
+  }
+  &__item_count {
+    border: 1px solid;
+    padding: 1px 16px;
+    margin: 0 0 0 24px;
+  }
+  &__form {
+    margin: 0 0 0 129px;
+
+    @media (max-width: 1240px) {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    @include mobile {
+      display: block;
+      margin: 0 auto;
+    }
+    legend {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+    }
+    &-button {
+      padding: 9px 15px 11px;
+      text-transform: uppercase;
+      @include font(11px, 13px, 300);
+      color: #4a4a4a;
+      background-color: transparent;
+      margin: 20px 0 57px 0;
+    }
+  }
+  &__button-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 128px 0;
+
+    @media (max-width: 1240px) {
+      justify-content: center;
+    }
+  }
+  &__button {
+    padding: 16px 0;
+    width: 230px;
+    text-transform: uppercase;
+    @include font(11px, 13px, 300);
+    color: #4a4a4a;
+    background-color: transparent;
+
+    @media (max-width: 1240px) {
+      &_margin {
+        margin: 0 40px 0 0;
+      }
+    }
+  }
+  &__total {
+    width: 400px;
+    height: 215px;
+    background-color: #f5f3f3;
+    text-align: right;
+
+    @media (max-width: 1240px) {
+      margin: 60px 0;
+    }
+    @include mobile {
+      margin: 0 auto 96px;
+    }
+  }
+  &__sub-total {
+    @include font(11px, 13px);
+    text-transform: uppercase;
+    padding: 39px 34px 0 0;
+
+    &_price {
+      padding: 0 0 0 20px;
+    }
+  }
+  &__grand-total {
+    @include font(16px, 19px, 300);
+    text-transform: uppercase;
+    padding: 12px 37px 0 0;
+
+    &_price {
+      padding: 0 0 0 20px;
+      color: $dark-pink;
+      font-weight: 700;
+    }
+  }
+  &__button-proceed {
+    display: flex;
+    margin: 17px auto 0;
+    padding: 15px 43px;
+    background-color: $dark-pink;
+    text-transform: uppercase;
+    border: none;
+    @include font(16px, 19px, 300);
+    color: #fff;
+  }
+}
