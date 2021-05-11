@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cart</title>
+  </head>
+  <body>
+    @@include("../../blocks/modules/header/header.html")
+    <section class="cart-heading">
+      <div class="container">
+        <h1 class="cart-heading__title">shopping cart</h1>
+      </div>
+    </section>
+    <main class="cart container">
+      <div class="cart__block">
+        <ul class="cart__list-block">
+          <img src="../img/cart-1.jpg" alt="cart1" width="262" height="306" />
+          <ul class="cart__list">
+            <li class="cart__item-heading">mango people t-shirt</li>
+            <li class="cart__item">
+              Price: <span class="cart__item_pink">$300</span>
+            </li>
+            <li class="cart__item">Color: Red</li>
+            <li class="cart__item">Size: Xl</li>
+            <li class="cart__item">
+              Quantity: <span class="cart__item_count">2</span>
+            </li>
+          </ul>
+        </ul>
+        <ul class="cart__list-block">
+          <img src="../img/cart-2.jpg" alt="cart2" width="262" height="306" />
+          <ul class="cart__list">
+            <li class="cart__item-heading">mango people t-shirt</li>
+            <li class="cart__item">Price: $300</li>
+            <li class="cart__item">Color: Red</li>
+            <li class="cart__item">Size: Xl</li>
+            <li class="cart__item">
+              Quantity: <span class="cart__item_count">2</span>
+            </li>
+          </ul>
+        </ul>
+        <div class="cart__button-block">
+          <button type="button" class="cart__button cart__button_margin">
+            clear shopping cart
+          </button>
+          <button type="button" class="cart__button">continue shopping</button>
+        </div>
+      </div>
+      <div class="cart__form">
+        <fieldset>
+          <legend>shipping adress</legend>
+          <p><input type="text" id="input__form" placeholder="Bangladesh" /></p>
+          <p>
+            <input type="text" id="input__form" placeholder="State" />
+          </p>
+          <p>
+            <input
+              type="number"
+              id="input__form"
+              placeholder="Postcode / Zip"
+            />
+          </p>
+          <button type="submit" class="cart__form-button">get a quote</button>
+        </fieldset>
+        <div class="cart__total">
+          <p class="cart__sub-total">
+            sub total <span class="cart__sub-total_price">$900</span>
+          </p>
+          <p class="cart__grand-total">
+            grand total <span class="cart__grand-total_price">$900</span>
+          </p>
+          <hr />
+          <button type="button" class="cart__button-proceed">
+            proceed to checkout
+          </button>
+        </div>
+      </div>
+    </main>
+    @@include("../../blocks/modules/footer/footer.html")
+  </body>
+</html>

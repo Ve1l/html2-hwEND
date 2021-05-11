@@ -1,0 +1,147 @@
+.footer {
+  &__subscribe {
+    background-image: url('../img/footer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__wrapper {
+    background: rgba(244, 244, 244, 0.7);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      justify-content: space-around;
+    }
+    @include mobile {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item-img {
+    margin: 87px 0 0 0;
+  }
+
+  &__item-text {
+    margin: 42px 0 126px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #222224;
+    width: 360px;
+    @include mobile {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    min-width: 386px;
+  }
+
+  &__item-heading {
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 167.2%;
+    color: #222224;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  &__item__sub-text {
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 167.2%;
+    color: #222224;
+    font-weight: normal;
+    margin: 0 0 32px;
+    font-size: 20px;
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__item-input {
+    padding: 16px 0 14px 22px;
+    border-radius: 25px 0 0 25px;
+    width: 273px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222224;
+    opacity: 0.67;
+    border: none;
+    background: #e1e1e1;
+
+    @include mobile {
+      margin: 0 0 219px 0;
+      width: 55%;
+    }
+  }
+
+  &__item-button {
+    padding: 16px 14px 14px 16px;
+    border-radius: 0 25px 25px 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    border: none;
+    background-color: $dark-pink;
+    &:hover {
+      background-color: transparent;
+      color: $dark-pink;
+      box-shadow: inset 1px 0 1px 1px $dark-pink;
+    }
+  }
+
+  &__contacts {
+    background-color: $dark-blue;
+  }
+
+  &__contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__copyright-heading {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fbfbfb;
+    @include mobile {
+      padding: 0 0 24px 0;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__social-item {
+    background-color: #ffffff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 7px;
+    &:hover {
+      background-color: $dark-pink;
+    }
+  }
+}
