@@ -35,10 +35,17 @@
     text-align: center;
     color: #222224;
     width: 360px;
+    @include mobile {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__item {
     text-align: center;
+    min-width: 386px;
   }
 
   &__item-heading {
@@ -58,12 +65,15 @@
     font-weight: normal;
     margin: 0 0 32px;
     font-size: 20px;
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__item-input {
     padding: 16px 0 14px 22px;
-    width: 256px;
     border-radius: 25px 0 0 25px;
+    width: 273px;
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
@@ -74,6 +84,7 @@
 
     @include mobile {
       margin: 0 0 219px 0;
+      width: 55%;
     }
   }
 
@@ -101,6 +112,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mobile {
+      flex-direction: column-reverse;
+    }
   }
 
   &__copyright-heading {
@@ -108,6 +122,9 @@
     font-size: 16px;
     line-height: 19px;
     color: #fbfbfb;
+    @include mobile {
+      padding: 0 0 24px 0;
+    }
   }
 
   &__social-list {

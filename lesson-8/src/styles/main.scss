@@ -169,7 +169,7 @@
 .products {
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
     @include mobile {
@@ -235,6 +235,7 @@
     color: $dark-pink;
     border: 1px solid;
     background-color: transparent;
+    cursor: pointer;
     &:hover {
       background-color: $dark-pink;
       color: #fff;
@@ -310,6 +311,9 @@
       padding: 0 0 0 16px;
       margin: 0 0 40px 0;
     }
+    @include mobile {
+      justify-content: center;
+    }
   }
 
   &__wrapper {
@@ -321,7 +325,11 @@
       flex-wrap: wrap;
     }
   }
-
+  &__form {
+    @include mobile {
+      width: 359px;
+    }
+  }
   &__form-radio {
     font-weight: 300;
     font-size: 11px;
@@ -394,11 +402,8 @@
 }
 
 .cart-heading {
-  background: #f8f3f4;
-  margin: 0 0 96px 0;
-
+  background-color: #f8f3f4;
   @include mobile {
-    margin: 0 0 39px 0;
     text-align: center;
   }
   &__title {
@@ -409,10 +414,20 @@
     font-size: 24px;
     line-height: 29px;
   }
+  &__list {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #636363;
+  }
 }
 
 .cart {
   display: flex;
+  padding: 96px 0 0 0;
 
   @media (max-width: 1240px) {
     display: block;
@@ -420,6 +435,7 @@
 
   @include mobile {
     display: block;
+    padding: 39px 0 0 0;
   }
   &__list {
     margin: 22px 0 0 31px;
@@ -565,4 +581,160 @@
     @include font(16px, 19px, 300);
     color: #fff;
   }
+}
+
+.arrivals {
+  background-color: #f7f7f7;
+  @include tablet {
+    width: 100%;
+  }
+  &__cart-heading {
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &__cart-title {
+    @include mobile {
+      padding: 24px 0 32px 0;
+    }
+  }
+  &__cart-list {
+    @include mobile {
+      justify-content: center;
+      padding: 0 0 46px 0;
+    }
+  }
+  &__carousel-img {
+    @include tablet {
+      max-width: 466px;
+      max-height: 565px;
+    }
+    @include mobile {
+      width: 374px;
+      height: 454px;
+    }
+  }
+  &__collection {
+    position: relative;
+    height: 664px;
+    @include tablet {
+      margin: 0 0 129px 0;
+    }
+    @include mobile {
+      margin: 0 0 64px 0;
+    }
+  }
+  &__box {
+    max-width: 1142px;
+    height: 601px;
+    position: absolute;
+    border: 1px solid #eaeaea;
+    bottom: 19%;
+    right: 14%;
+    background-color: #fff;
+    @include tablet {
+      position: static;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__heading {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 64px 0 0 0;
+    position: relative;
+    &::after {
+      content: '';
+      width: 63px;
+      height: 3px;
+      background-color: #ef5b70;
+      position: absolute;
+      top: 30px;
+      left: 47%;
+    }
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4d4d4d;
+    text-transform: uppercase;
+    margin: 27px 0 48px 0;
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5e5e5e;
+    margin: 0 0 32px 0;
+    max-width: 555px;
+    @include mobile {
+      width: 96%;
+    }
+  }
+  &__price {
+    margin: 32px 0 65px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #ef5b70;
+  }
+  &__line {
+    display: flex;
+    margin: 0 auto 65px;
+    width: 76%;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 49px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+    text-transform: uppercase;
+    @include mobile {
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+  &__button {
+    border: 1px solid #ff6a6a;
+    width: 211px;
+    height: 47px;
+    background: transparent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #f26376;
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    left: 10%;
+  }
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #636363;
+}
+
+.carousel-control-next {
+  justify-content: flex-end;
+}
+
+.carousel-control-prev {
+  justify-content: flex-start;
 }

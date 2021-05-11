@@ -22,12 +22,25 @@
   &__button {
     border: none;
     background-color: transparent;
+    &-svg {
+      fill: #e8e8e8;
+    }
+    &:hover {
+      .header__button-svg {
+        fill: $dark-pink;
+      }
+    }
   }
 
   &__link {
     margin: 0 0 0 34px;
+    .header__button-svg {
+      fill: #e8e8e8;
+    }
     &:hover {
-      fill: $dark-pink;
+      .header__button-svg {
+        fill: $dark-pink;
+      }
     }
 
     @include mobile {
